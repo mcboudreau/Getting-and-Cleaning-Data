@@ -37,4 +37,4 @@ data_master[,1] <- activity_labels[data_master[,1],2]
 # From the master data set create a second, independent tidy data set with the average 
 # of each variable for each activity and each subject
 data_tidy <- aggregate(. ~Activity + Subject, data_master, mean)
-write.table(data_tidy,"./data/tidydata.txt", sep = "\t")
+write.table(data_tidy,"./data/tidydata.txt", sep = "\t", row.names=FALSE)
